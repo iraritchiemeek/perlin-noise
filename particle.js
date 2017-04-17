@@ -2,7 +2,7 @@ function Particle() {
 	this.pos = createVector(random(width),random(height))
 	this.vel = createVector(0,0)
 	this.acc = createVector(0,0)
-	this.maxspeed = 2
+	this.maxspeed = 5
 
 	this.colors = [0, 0, 0]
 
@@ -22,8 +22,8 @@ function Particle() {
 	this.show = function () {
 		// console.log(this.colors[0])
 		// console.log(this.colors[2])
-		stroke(this.colors[0], this.colors[1], this.colors[2], 50)
-		strokeWeight(5)
+		stroke(this.colors[0], this.colors[1], this.colors[2], 20)
+		strokeWeight(1)
 		line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y)
 		// point(this.pos.x, this.pos.y)
 		this.updatePrev()
@@ -66,7 +66,7 @@ function Particle() {
 			if (this.colors[i] >= 255  || this.colors[i] <= 0) {
 				this.colors[i] = random(255)
 			}
-			this.colors[i] += floor(map(angle, 0, 5, 0, 255)) / 8
+			this.colors[i] += floor(map(angle, 0, 5, 0, 255)) / 20
 		}
 	}
 }

@@ -22,7 +22,7 @@ function setup() {
 		particles[i] = new Particle()
 	}
 
-	// background(0)
+	background(0)
 }
 
 function draw() {
@@ -34,9 +34,9 @@ function draw() {
 			flowField[index] = v
 			var angle = noise(xoff, yoff, zoff) * TWO_PI
 			var v = p5.Vector.fromAngle(angle)
-			v.setMag(1)
+			v.setMag(0.2)
 			xoff += inc
-			stroke(0, 50)
+			// stroke(0, 50)
 			// strokeWeight(1)
 			// push()
 			// translate(x * scl, y * scl)
