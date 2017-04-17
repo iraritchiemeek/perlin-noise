@@ -34,7 +34,7 @@ function draw() {
 			flowField[index] = v
 			var angle = noise(xoff, yoff, zoff) * TWO_PI
 			var v = p5.Vector.fromAngle(angle)
-			v.setMag(10)
+			v.setMag(3)
 			xoff += inc
 			// stroke(0, 50)
 			// strokeWeight(1)

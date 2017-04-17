@@ -22,7 +22,7 @@ function Particle() {
 	this.show = function () {
 		// console.log(this.colors[0])
 		// console.log(this.colors[2])
-		stroke(this.colors[0], this.colors[1], this.colors[2], 20)
+		stroke(this.colors[0], this.colors[1], this.colors[2], 90)
 		strokeWeight(1)
 		line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y)
 		// point(this.pos.x, this.pos.y)
