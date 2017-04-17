@@ -2,7 +2,7 @@ function Particle() {
 	this.pos = createVector(random(width),random(height))
 	this.vel = createVector(0,0)
 	this.acc = createVector(0,0)
-	this.maxspeed = 5
+	this.maxspeed = 3
 
 	this.colors = [0, 0, 0]
 
