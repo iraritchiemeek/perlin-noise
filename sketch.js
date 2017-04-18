@@ -4,7 +4,6 @@ var cols, rows
 
 var zoff = 0
 
-var fr
 
 var particles = []
 
@@ -14,7 +13,6 @@ function setup() {
 	createCanvas(400, 400)
 	cols = floor(width/scl)
 	rows = floor(height/scl)
-	fr = createP('')
 
 	flowField = new Array(cols * rows)
 
@@ -34,7 +32,7 @@ function draw() {
 			flowField[index] = v
 			var angle = noise(xoff, yoff, zoff) * TWO_PI
 			var v = p5.Vector.fromAngle(angle)
-			v.setMag(3)
+			v.setMag(0.5)
 			xoff += inc
 			// stroke(0, 50)
 			// strokeWeight(1)
@@ -48,11 +46,10 @@ function draw() {
 		zoff += 0.0003
 	}
 	for (var i = 0; i < particles.length; i++) {
-		particles[i].color(angle)
+		particles[i].color(i)
 		particles[i].follow(flowField)
 		particles[i].edges()
 		particles[i].show()
 		particles[i].update()
 	}
-	fr.html(floor(frameRate()))
 }
